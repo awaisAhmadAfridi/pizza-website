@@ -422,3 +422,41 @@ p {
     box-shadow: none;
     border-color: var(--primary-color);
 }
+
+.floating-btn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background: linear-gradient(45deg, #ff4b2b, #ff416c);
+    color: #fff;
+    font-weight: 600;
+    padding: 14px 22px;
+    border-radius: 50px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    background: linear-gradient(45deg, #ff416c, #ff4b2b);
+    color: #00a149;
+    transform: translateY(-4px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.floating-btn i {
+    font-size: 18px;
+}
+
+@keyframes popUp {
+    0% { transform: translateY(100px); opacity: 0; }
+    100% { transform: translateY(0); opacity: 1; }
+}
+
+.floating-btn {
+    animation: popUp 0.6s ease-out;
+}
